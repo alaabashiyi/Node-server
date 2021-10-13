@@ -1,6 +1,6 @@
 const { search, maxProducts, LIMIT, products, pages } = require('../utils/helper');
 
-const getItems = async (req, res, next) => {
+const getItems = (req, res, next) => {
     const { keyword = '', page = 1 } = req.query;
     let data;
 
