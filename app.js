@@ -1,11 +1,8 @@
 const express = require('express');
 const app = express();
+const router = require('./routes/router');
 const PORT = 3001;
 
-
-app.get('/api', (req, res) => {
-    res.send('Hello World !');
-})
-
+app.use(router);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
